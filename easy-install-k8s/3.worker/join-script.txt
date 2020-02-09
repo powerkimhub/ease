@@ -1,0 +1,7 @@
+# copy & paste when kubeadm init on master.
+kubeadm join 172.31.24.17:6443 --token h0d54i.wjqvdtchr2j2zw98 --discovery-token-ca-cert-hash sha256:4d08731ad8e8802a7eaa534bd420f93828d30a88ec7294a788e409b0ab0fd160
+
+
+# get token and hash and make join command.
+kubeadm token list  (or token create)
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'

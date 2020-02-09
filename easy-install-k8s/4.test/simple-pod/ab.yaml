@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: a
+spec:
+  containers:
+    - name: a
+      image: nginx
+      #command: ["/bin/bash", "-ec", "while :; do echo 'a'; sleep 10 ; done"]
+  restartPolicy: Never
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: b
+spec:
+  containers:
+    - name: b
+      image: nginx
+      #command: ["/bin/bash", "-ec", "while :; do echo 'b'; sleep 10 ; done"]
+  restartPolicy: Never
