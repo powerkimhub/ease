@@ -19,3 +19,26 @@ spec:
       image: nginx
       #command: ["/bin/bash", "-ec", "while :; do echo 'b'; sleep 10 ; done"]
   restartPolicy: Never
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: c
+spec:
+  containers:
+    - name: c
+      image: nginx
+      #command: ["/bin/bash", "-ec", "while :; do echo 'b'; sleep 10 ; done"]
+  restartPolicy: Never
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: d
+spec:
+  containers:
+    - name: d
+      image: nginx
+      #command: ["/bin/bash", "-ec", "while :; do echo 'b'; sleep 10 ; done"]
+  restartPolicy: Never
+
