@@ -1,4 +1,6 @@
 ## shortening of K8S CLI
+alias lscomponent='kubectl get componentstatuses'
+alias lscomponents='kubectl get componentstatuses'
 alias lsnode='kubectl get nodes -o wide'
 alias lsnodes='lsnode'
 alias descnode='kubectl describe nodes'
