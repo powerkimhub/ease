@@ -1,6 +1,7 @@
 ## shortening of K8S CLI
 alias lscomponent='kubectl get componentstatuses'
 alias lscomponents='kubectl get componentstatuses'
+
 alias lsnode='kubectl get nodes -o wide'
 alias lsnodes='lsnode'
 alias descnode='kubectl describe nodes'
@@ -16,6 +17,8 @@ alias descdeploy='kubectl describe deployments'
 
 alias lssvc='kubectl get svc -o wide'
 alias descsvc='kubectl describe svc'
+
+alias lsall='kubectl get all'
 
 alias lsimg='kubectl -o custom-columns=CONTAINER:.spec.containers[*].name,IMAGE:.spec.containers[*].image get pods'
 alias lsimgs='lsimg'
