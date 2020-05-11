@@ -9,8 +9,7 @@ systemctl restart kubelet;
 rm -rf /var/lib/etcd/*;
 
 ## 2. initialize k8s
-kubeadm init --apiserver-advertise-address=`hostname -i` --token-ttl=0;
-
+kubeadm init --apiserver-advertise-address=`hostname -i | awk '{print $1}'` --token-ttl=0;
 
 ## 3. add user's role
 mkdir -p $HOME/.kube;
