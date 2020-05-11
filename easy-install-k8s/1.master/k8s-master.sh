@@ -35,8 +35,7 @@ systemctl daemon-reload && systemctl restart kubelet;
 
 
 ## 5. initialize k8s
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=`hostname -i` --token-ttl=0
-
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=`hostname -i | awk '{print $1}'` --token-ttl=0
 
 ## 6. add user's role
 mkdir -p $HOME/.kube;
