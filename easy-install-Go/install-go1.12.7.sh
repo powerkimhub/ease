@@ -11,7 +11,7 @@ echo "" >> .bashrc
 echo "# for Go env" >> .bashrc
 echo "export GOPATH=$HOME/gosrc;" >> .bashrc
 echo "export GOROOT=$HOME/go;" >> .bashrc 
-echo "export PATH=$PATH:$GOROOT/bin;" >> .bashrc
+echo "export PATH=\$PATH:\$GOROOT/bin;" >> .bashrc
 
 # after running this
 # source .bashrc
